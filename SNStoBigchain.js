@@ -22,22 +22,22 @@ module.exports.handler = async (event) => {
   const auxmessage = event.Records[0].Sns.Message;
   console.log('Message received from SNS:', auxmessage); 
   const tx = driver.Transaction.makeCreateTransaction(
-/*     {
+   {
       datetime: new Date().toString(),
       location: 'Maternity',
-      or: 'q11',
+      or: 'or#11',
       device: {
           model: 'Philips Intellivue MP40',
-          id: '1234asbdfsg',
+          id: '0009FB04D99B',
       }
-    }  ,
- */ 
+   },
+  
    { datetime: new Date().toString(),
       location: 'Maternity',
-      or: 'q11',
+      or: 'or#11',
       device: {
           model: 'Philips Intellivue MP40',
-          id: '1234asbdfsg',
+          id: '0009FB04D99B',
       },
       message: auxmessage
     },
