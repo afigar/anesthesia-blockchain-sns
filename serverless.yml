@@ -68,14 +68,12 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
-# arn:aws:lambda:us-east-1:212507307353:function:intellijson-dev-app
-# TopicArn: 'arn:aws:sns:us-east-1:212507307353:IntelliChain
 functions:
   SNStoBigchain:
     handler: SNStoBigchain.handler
     events:
 #      - sns: IntelliChain # created immediately
-    onError: arn:aws:sns:us-east-1:212507307353:Bigchain-error
+    onError: arn:aws:sns:us-east-1:xxxxxxxx:Bigchain-error
   error:
     handler: error.handler
     events:
